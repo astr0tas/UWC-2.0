@@ -6,6 +6,8 @@ import { MCPList } from './pages/mcpList.jsx';
 import { Sorry } from './pages/inDevelopment.jsx';
 import { MyMenu } from './pages/sidemenu.jsx';
 import { Message } from './pages/message.jsx';
+import { VehicleList } from './pages/vehicleList.jsx';
+import { VehicleInfo } from './pages/vehicleInfo.jsx';
 
 function App()
 {
@@ -19,6 +21,8 @@ function App()
                                     <Route path="mcpList/:MCPxx" element={ <MCPInfo /> } />
                                     <Route path="message" element={ <Message /> } />
                                     <Route path="inDev" element={ <Sorry /> } />
+                                    <Route path="vehicleList" element={ <VehicleList /> } />
+                                    <Route path="vehicleList/:vehiclexx" element={ <VehicleInfo /> } />
                               </Route>
                         </Routes>
                   </BrowserRouter>

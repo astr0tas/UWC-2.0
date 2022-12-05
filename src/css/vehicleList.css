@@ -1,38 +1,38 @@
-.myMCPList {
+.myVehicleList {
     display: flex;
     flex-direction: column;
     padding-left: 250px;
     padding-bottom: 20px;
 }
 
-.myMCPList h1 {
+.myVehicleList h1 {
     text-align: center;
 }
 
-.myMCPList table button {
+.myVehicleList table button {
     padding: 5px;
     margin: 15px;
     background-color: antiquewhite;
 }
 
-.myMCPList button:active {
+.myVehicleList button:active {
     padding: 5px;
     margin: 15px;
     background-color: bisque;
 }
 
-.myMCPList button {
+.myVehicleList button {
     padding: 5px;
     margin: 15px;
     background-color: antiquewhite;
     width: 200px;
 }
 
-.myMCPList view {
+.myVehicleList view {
     align-self: center;
 }
 
-.myMCPList .MCPDel {
+.myVehicleList .VehicleDel {
     padding: 5px;
     margin: 15px;
     background-color: red;
@@ -40,29 +40,29 @@
 }
 
 
-.myMCPList .MCPDel:active {
+.myVehicleList .VehicleDel:active {
     padding: 5px;
     margin: 15px;
     background-color: rgb(213, 75, 103);
     color: antiquewhite;
 }
 
-.myMCPList table,
+.myVehicleList table,
 tr {
     text-align: center;
     border-bottom: 1px solid;
     border-color: black;
 }
 
-.myMCPList th,
+.myVehicleList th,
 tr,
 td {
     margin: 20px;
     padding: 10px;
 }
 
-.myMCPList table {
-    width: 90%;
+.myVehicleList table {
+    width: 50%;
     height: 100%;
     align-self: center;
 }

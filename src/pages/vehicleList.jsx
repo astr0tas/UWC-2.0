@@ -1,9 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../css/mcpList.css';
-import mcpList from '../data/mcps.js';
+import '../css/vehicleList.css';
+import vehicleList from '../data/vehicle.js';
 
-export const MCPList = () =>
+
+export const VehicleList = () =>
 {
       const effectRan = useRef(false);
 
@@ -11,29 +12,29 @@ export const MCPList = () =>
       {
             if (effectRan.current === false)
             {
-                  let setColor = document.getElementsByClassName('MCPManage');
+                  let setColor = document.getElementsByClassName('VehicleManage');
                   setColor[0].style.color = "blue";
 
-                  for (let key in mcpList)
+                  for (let key in vehicleList)
                   {
-                        document.getElementById("MCPList").innerHTML += "<tr>"
-                              + "<td>" + mcpList[key].ma + "</td>"
-                              + "<td>" + mcpList[key].diaChi + "</td>"
-                              + "<td>" + Math.ceil(mcpList[key].sucChuaHienTai / mcpList[key].sucChuaToiDa * 100) + "%" + "</td>"
+                        document.getElementById("vehicleList").innerHTML += "<tr>"
+                              + "<td>" + vehicleList[key].ma + "</td>"
+                              + "<td>" + vehicleList[key].trangthai + "</td>"
                               + "<td>"
-                              + "<button class = 'MCPs' id =" + mcpList[key].ma + "> Chi tiết </button>"
-                              + "<button class='MCPDel'>Xóa</button>"
+                              + "<button class = 'Vehicles' id =" + vehicleList[key].ma + "> Chi tiết </button>"
+                              + "<button class='VehicleDel'>Xóa</button>"
                               + "</td>"
                               + "<tr/>";
                   }
-                  let obj = document.getElementsByClassName('MCPDel');
+                  let obj = document.getElementsByClassName('VehicleDel');
                   for (let i = 0; i < obj.length; i++)
                         obj[i].addEventListener('click', handleClickNotDev);
-                  obj = document.getElementsByClassName('MCPs');
+                  obj = document.getElementsByClassName('Vehicles');
                   for (let i = 0; i < obj.length; i++)
                         obj[i].addEventListener('click', handleClickInfo);
                   effectRan.current = true;
             }
+
       });
 
       const Navigate = useNavigate();
@@ -51,24 +52,23 @@ export const MCPList = () =>
       }
 
       return (
-            <div class="myMCPList">
-                  <h1>Danh sách MCP</h1>
+            <div class="myVehicleList">
+                  <h1>Danh sách Xe</h1>
                   <table>
                         <thead>
                               <tr>
-                                    <th><h3>Mã MCP</h3></th>
-                                    <th><h3>Địa chỉ</h3></th>
-                                    <th><h3>Tình trạng</h3></th>
-                                    <th><h3>Thao tác</h3></th>
+                                    <th><h3>MÃ XE</h3></th>
+                                    <th><h3>TRẠNG THÁI</h3></th>
+                                    <th><h3>TÁC VỤ</h3></th>
                               </tr>
                         </thead>
-                        <tbody id="MCPList">
+                        <tbody id="vehicleList">
                         </tbody>
                   </table>
                   <br />
                   <br />
                   <view>
-                        <button onClick={ handleClickNotDev }>Thêm MCP</button>
+                        <button onClick={ handleClickNotDev }>Thêm xe</button>
                   </view>
             </div>
       );
