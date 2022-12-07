@@ -1,9 +1,9 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import { Collector, Janitor } from '../data/staff.js';
-import '../css/staffInfo.css';
+import { Collector, Janitor } from '../data/worker.js';
+import '../css/workerInfo.css';
 
-export const StaffInfo = () =>
+export const WorkerInfo = () =>
 {
       const effectRan = useRef(false);
 
@@ -11,23 +11,23 @@ export const StaffInfo = () =>
       {
             if (effectRan.current === false)
             {
-                  let setColor = document.getElementsByClassName('StaffManage');
+                  let setColor = document.getElementsByClassName('WorkerManage');
                   setColor[0].style.color = "blue";
                   effectRan.current = true;
             }
       });
 
       const currentRoute = useParams();
-      const staffID = currentRoute.staffID;
+      const workerID = currentRoute.workerID;
 
       let gioiTinh, congViec, hoTen, diaChi, ngaySinh, CCCD, sdt, email;
 
-      if (staffID[0] === 'J')
+      if (workerID[0] === 'J')
       {
             congViec = "Công nhân thu gom rác";
             for (let key in Janitor)
             {
-                  if (Janitor[key].ID === staffID)
+                  if (Janitor[key].ID === workerID)
                   {
                         gioiTinh = Janitor[key].gioitinh;
                         hoTen = Janitor[key].ten;
@@ -45,7 +45,7 @@ export const StaffInfo = () =>
             congViec = "Công nhân chở rác";
             for (let key in Collector)
             {
-                  if (Collector[key].ID === staffID)
+                  if (Collector[key].ID === workerID)
                   {
                         gioiTinh = Collector[key].gioitinh;
                         hoTen = Collector[key].ten;
@@ -74,13 +74,13 @@ export const StaffInfo = () =>
       }
 
       return (
-            <div class="staffInfo">
+            <div class="workerInfo">
                   <h1>Thông tin chi tiết nhân viên</h1>
                   <br />
                   <img src='https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX33936888.jpg' alt="Ảnh nhân viên" />
                   <br />
                   <table className="Properties">
-                        <thead><h2>Mã nhân viên: </h2> <h2 class="Props">{ staffID }</h2></thead>
+                        <thead><h2>Mã nhân viên: </h2> <h2 class="Props">{ workerID }</h2></thead>
                         <br />
                         <thead><h2>Họ tên: </h2> <h2 class="Props">{ hoTen }</h2></thead>
                         <br />

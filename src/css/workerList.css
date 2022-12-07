@@ -1,38 +1,38 @@
-.myStaffList {
+.myWorkerList {
     display: flex;
     flex-direction: column;
     padding-left: 250px;
     padding-bottom: 20px;
 }
 
-.myStaffList h1 {
+.myWorkerList h1 {
     text-align: center;
 }
 
-.myStaffList table button {
+.myWorkerList table button {
     padding: 5px;
     margin: 15px;
     background-color: antiquewhite;
 }
 
-.myStaffList button:active {
+.myWorkerList button:active {
     padding: 5px;
     margin: 15px;
     background-color: bisque;
 }
 
-.myStaffList button {
+.myWorkerList button {
     padding: 5px;
     margin: 15px;
     background-color: antiquewhite;
     width: 200px;
 }
 
-.myStaffList view {
+.myWorkerList view {
     align-self: center;
 }
 
-.myStaffList .StaffDel {
+.myWorkerList .WorkerDel {
     padding: 5px;
     margin: 15px;
     background-color: red;
@@ -40,34 +40,34 @@
 }
 
 
-.myStaffList .StaffDel:active {
+.myWorkerList .WorkerDel:active {
     padding: 5px;
     margin: 15px;
     background-color: rgb(213, 75, 103);
     color: antiquewhite;
 }
 
-.myStaffList table,
+.myWorkerList table,
 tr {
     text-align: center;
     border-bottom: 1px solid;
     border-color: black;
 }
 
-.myStaffList th,
+.myWorkerList th,
 tr,
 td {
     margin: 20px;
     padding: 10px;
 }
 
-.myStaffList table {
+.myWorkerList table {
     width: 50%;
     height: 100%;
     align-self: center;
 }
 
-.myStaffList .rendering {
+.myWorkerList .rendering {
     display: inline-block;
     align-self: center;
     text-align: center;

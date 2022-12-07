@@ -1,19 +1,19 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import { Collector, Janitor } from '../data/staff.js';
-import '../css/schedule.css';
+import { Collector, Janitor } from '../data/worker.js';
+import '../css/workerSchedule.css';
 
-export const StaffSchedule = () =>
+export const WorkerSchedule = () =>
 {
       const currentRoute = useParams();
-      const staffID = currentRoute.staffID;
+      const workerID = currentRoute.workerID;
 
       let name, job;
-      if (staffID[0] === 'J')
+      if (workerID[0] === 'J')
       {
             for (let key in Janitor)
             {
-                  if (Janitor[key].ID === staffID)
+                  if (Janitor[key].ID === workerID)
                   {
                         name = Janitor[key].ten;
                         job = "công nhân thu gom rác"
@@ -25,7 +25,7 @@ export const StaffSchedule = () =>
       {
             for (let key in Collector)
             {
-                  if (Collector[key].ID === staffID)
+                  if (Collector[key].ID === workerID)
                   {
                         name = Collector[key].ten;
                         job = "công nhân chở rác"
@@ -39,16 +39,16 @@ export const StaffSchedule = () =>
       {
             if (effectRan.current === false)
             {
-                  let setColor = document.getElementsByClassName('StaffManage');
+                  let setColor = document.getElementsByClassName('WorkerManage');
                   setColor[0].style.color = "blue";
 
                   let schedule;
 
-                  if (staffID[0] === 'J')
+                  if (workerID[0] === 'J')
                   {
                         for (let key in Janitor)
                         {
-                              if (Janitor[key].ID === staffID)
+                              if (Janitor[key].ID === workerID)
                               {
                                     schedule = Janitor[key].lichlamviec;
                                     break;
@@ -59,7 +59,7 @@ export const StaffSchedule = () =>
                   {
                         for (let key in Collector)
                         {
-                              if (Collector[key].ID === staffID)
+                              if (Collector[key].ID === workerID)
                               {
                                     schedule = Collector[key].lichlamviec;
                                     break;

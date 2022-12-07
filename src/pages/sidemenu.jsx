@@ -15,7 +15,7 @@ export const MyMenu = () =>
         <div>
             <div className='menu'>
                 <h1>Quản trị</h1>
-                <a href='/sideMenu/staffList' class="StaffManage">Quản lý nhân viên</a>
+                <a href='/sideMenu/workerList/janitorList' class="WorkerManage">Quản lý nhân viên</a>
                 <a href='/sideMenu/vehicleList' class="VehicleManage">Quản lý xe</a>
                 <a href='' class="RouteManage">Quản lý tuyến đường</a>
                 <a href='' class="AreaManage">Quản lý khu vực</a>
