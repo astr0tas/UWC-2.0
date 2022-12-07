@@ -37,5 +37,13 @@
     font-weight: normal;
     font-size: 150%;
     text-decoration: none;
-    color:blue;
+    color: blue;
+}
+
+.AreaID .Properties #printWorkerList {
+    display: inline;
+    font-weight: normal;
+    font-size: 110%;
+    text-decoration: none;
+    color: blue;
 }

@@ -7,6 +7,9 @@ import areaList, { baseMCPPath, baseWorkerPath } from '../data/area.js';
 export const AreaInfo = () =>
 {
 
+      const currentRoute = useParams();
+      const AreaId = currentRoute.Axx;
+
       const effectRan = useRef(false);
 
       useEffect(() =>
@@ -15,12 +18,27 @@ export const AreaInfo = () =>
             {
                   let setColor = document.getElementsByClassName('AreaManage');
                   setColor[0].style.color = "blue";
+
+                  for (let key in areaList)
+                  {
+                        if (areaList[key].ma === AreaId)
+                        {
+                              if (areaList[key].congnhan.length !== 0)
+                              {
+                                    let i = 0;
+                                    for (i; i < areaList[key].congnhan.length - 1; i++)
+                                          document.getElementById('printWorkerList').innerHTML += "<a href=\"" + baseWorkerPath + areaList[key].congnhan[i] + "\">" + areaList[key].congnhan[i] + "</a>"
+                                                + "<h2 class=\"Props\">,   </h2>";
+                                    document.getElementById('printWorkerList').innerHTML += "<a href=\"" + baseWorkerPath + areaList[key].congnhan[i] + "\">" + areaList[key].congnhan[i] + "</a>";
+                              }
+                              break;
+                        }
+                  }
+
                   effectRan.current = true;
             }
       });
 
-      const currentRoute = useParams();
-      const AreaId = currentRoute.Axx;
       //mcps, streets, worker
       let mcps, streets, worker;
 
@@ -30,7 +48,7 @@ export const AreaInfo = () =>
             {
                   mcps = areaList[key].cacmcp;
                   streets = areaList[key].tenduong;
-                  worker = areaList[key].congnhan;
+                  //worker = areaList[key].congnhan;
                   break;
             }
       }
@@ -53,7 +71,7 @@ export const AreaInfo = () =>
                         <thead>
                               <h2>Các MCPs: </h2>
                               <a href={ baseMCPPath + mcps[0] }>{ mcps[0] }</a>
-                              <h2 class="Props">, </h2>
+                              <h2 class="Props">,   </h2>
                               <a href={ baseMCPPath + mcps[1] }>{ mcps[1] }</a>
                         </thead>
                         <br />
@@ -61,9 +79,10 @@ export const AreaInfo = () =>
                         <br />
                         <thead>
                               <h2>Công nhân đảm nhận: </h2>
-                              <a href={ baseWorkerPath + worker[0] }>{ worker[0] }</a>
+                              <div id="printWorkerList" />
+                              {/* <a href={ baseWorkerPath + worker[0] }>{ worker[0] }</a>
                               <h2 class="Props">,  </h2>
-                              <a href={ baseWorkerPath + worker[1] }>{ worker[1] }</a>
+                              <a href={ baseWorkerPath + worker[1] }>{ worker[1] }</a> */}
                         </thead>
                         <br />
                   </table>

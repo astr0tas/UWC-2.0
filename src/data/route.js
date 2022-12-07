@@ -12,73 +12,73 @@ export const baseWorkerPath = "/sideMenu/workerList/"
 var routeList = [
     {
         ma: "R01",
-        cacmcp:  ["MCP01", "MCP10"],
-        tenduong: 'Hùng Vương, Lê Hồng Phong, Lý Thái Tổ',
+        cacmcp: ["MCP01", "MCP10"],
+        tenduong: 'Hùng Vương, 3 Tháng 2',
         xe: 'V10',
         congnhan: ["C01", "C06"]
     },
     {
         ma: "R02",
         cacmcp: ["MCP02", "MCP09"],
-        tenduong: 'Nguyễn Chí Thanh, Sư Vạn Hạnh, Trần Nhân Tôn',
+        tenduong: 'Lê Hồng Phong, Ngô Quyền',
         xe: 'V09',
         congnhan: ['C03']
     },
     {
         ma: "R03",
         cacmcp: ["MCP03", "MCP08"],
-        tenduong: 'Lý Thái Tổ, Ngô Gia Tự, Nguyễn Tri Phương',
+        tenduong: 'Lý Thái Tổ, Nguyễn Tri Phương',
         xe: 'V08',
         congnhan: ['C04', 'C05']
     },
     {
         ma: "R04",
         cacmcp: ["MCP04", "MCP07"],
-        tenduong: 'Ngô Quyền, 3 Tháng 2, Nguyễn Tiểu La',
+        tenduong: 'Nguyễn Chí Thanh, Ngô Gia Tự',
         xe: 'V07',
-        congnhan: ''
+        congnhan: []
     },
     {
         ma: "R05",
         cacmcp: ["MCP05", "MCP06"],
-        tenduong: 'Lý Thường Kiệt, Nguyễn Kim',
+        tenduong: 'Sư Vạn Hạnh, Trần Nhân Tôn',
         xe: 'V06',
         congnhan: ['C07']
     },
     {
         ma: "R06",
         cacmcp: ["MCP01", "MCP05"],
-        tenduong: 'Lê Hồng Phong, Điện Biên Phủ, Nguyễn Thượng Hiền',
+        tenduong: 'Hùng Vương, Sư Vạn Hạnh',
         xe: 'V05',
         congnhan: ['C08', 'C10']
     },
     {
         ma: "R07",
         cacmcp: ["MCP07", "MCP08"],
-        tenduong: 'Cách Mạng Tháng 8, Trần Thiện Chánh',
+        tenduong: 'Ngô Gia Tự, Nguyễn Tri Phương',
         xe: 'V04',
         congnhan: ['C02']
     },
     {
         ma: "R08",
         cacmcp: ["MCP04", "MCP10"],
-        tenduong: 'Tô Hiến Thành, Cách Mạng Tháng 8',
+        tenduong: 'Nguyễn Chí Thanh, 3 Tháng 2',
         xe: 'V03',
         congnhan: ['C09']
     },
     {
         ma: "R09",
         cacmcp: ["MCP02", "MCP06"],
-        tenduong: 'Trường Sơn, Nguyễn Giàn Thanh, Đồng Nai',
+        tenduong: 'Lê Hồng Phong, Trần Nhân Tôn',
         xe: 'V02',
-        congnhan: ''
+        congnhan: []
     },
     {
         ma: "R10",
         cacmcp: ["MCP03", "MCP09"],
-        tenduong: 'Lý Thường Kiệt, Tô Hiến Thành, Thành Thái',
+        tenduong: 'Lý Thái Tổ, Ngô Quyền',
         xe: 'V01',
-        congnhan: ''
+        congnhan: []
     },
 ];
 
