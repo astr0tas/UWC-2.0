@@ -12,6 +12,10 @@ import { CollectorList } from './pages/collectorList.jsx';
 import { JanitorList } from './pages/janitorList.jsx';
 import { WorkerInfo } from './pages/workerInfo.jsx';
 import { WorkerSchedule } from './pages/workerSchedule.jsx';
+import { RouteList } from './pages/routeList.jsx';
+import { RouteInfo } from './pages/routeInfo.jsx';
+import { AreaList } from './pages/areaList.jsx';
+import { AreaInfo } from './pages/areaInfo.jsx';
 
 function App()
 {
@@ -31,6 +35,10 @@ function App()
                                     <Route path="workerList/janitorList" element={ <JanitorList /> } />
                                     <Route path="workerList/:workerID" element={ <WorkerInfo /> } />
                                     <Route path="workerList/:workerID/schedule" element={ <WorkerSchedule /> } />
+                                    <Route path="routeList" element={ <RouteList /> } />
+                                    <Route path="routeList/:Rxx" element={ <RouteInfo /> } />
+                                    <Route path="areaList" element={ <AreaList /> } />
+                                    <Route path="areaList/:Axx" element={ <AreaInfo /> } />
                               </Route>
                         </Routes>
                   </BrowserRouter>

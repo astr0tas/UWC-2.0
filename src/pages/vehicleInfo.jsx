@@ -44,6 +44,8 @@ export const VehicleInfo = () =>
             Navigate(-1);
       }
 
+      const routeInfo = '/sideMenu/routeList/' + route;
+
       return (
             <div className="vehicleID">
                   <h1>Thông tin kỹ thuật</h1>
@@ -58,7 +60,7 @@ export const VehicleInfo = () =>
                         <br />
                         <thead><h2>TẢI TRỌNG: </h2> <h2 class="Props">{ weight }</h2></thead>
                         <br />
-                        <thead ><h2>TUYẾN ĐƯỜNG PHỤ TRÁCH: </h2> <a href=''>{ route } </a> </thead>
+                        <thead ><h2>TUYẾN ĐƯỜNG PHỤ TRÁCH: </h2> <a href={ routeInfo }>{ route } </a> </thead>
                         <br />
                         <thead><h2>TRẠNG THÁI: </h2> <h2 class="Props">{ latest }</h2></thead>
                         <br />
