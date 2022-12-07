@@ -1,0 +1,44 @@
+.staffInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.staffInfo button {
+      margin: 1rem;
+      background-color: antiquewhite;
+      padding: 10px;
+      width: 200px;
+}
+
+.staffInfo button:active {
+      margin: 1rem;
+      background-color: bisque;
+      padding: 10px;
+      width: 200px;
+}
+
+.staffInfo img {
+      height: 300px;
+      width: 300px;
+}
+
+.staffInfo .Properties {
+      border-bottom: 1px solid;
+      border-color: black;
+}
+
+.staffInfo .Properties h2 {
+      display: inline;
+}
+
+.staffInfo .Properties .Props {
+      font-weight: normal;
+      font-size: 150%;
+}
+
+.staffInfo .buttons {
+      display: inline-block;
+      align-self: center;
+      text-align: center;
+}

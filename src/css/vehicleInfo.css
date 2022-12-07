@@ -50,3 +50,11 @@
       padding: 3px;
       width: 80px;
 }
+
+.vehicleID .Properties a {
+      display: inline;
+      font-weight: normal;
+      font-size: 150%;
+      text-decoration: none;
+      color:blue;
+}

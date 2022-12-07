@@ -21,7 +21,7 @@ export const Login = () =>
     {
         event.preventDefault();
         if (account.username === inputs.username && account.password === inputs.password)
-            Navigate("/sideMenu/mcpList"); // Should be /sideMenu/staffManage
+            Navigate("/sideMenu/staffList");
         else
         {
             window.alert("Tài khoản đăng nhập hoặc mật khẩu sai");

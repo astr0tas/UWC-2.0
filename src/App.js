@@ -8,6 +8,9 @@ import { MyMenu } from './pages/sidemenu.jsx';
 import { Message } from './pages/message.jsx';
 import { VehicleList } from './pages/vehicleList.jsx';
 import { VehicleInfo } from './pages/vehicleInfo.jsx';
+import { StaffList } from './pages/staffList.jsx';
+import { StaffInfo } from './pages/staffInfo.jsx';
+import { StaffSchedule } from './pages/staffSchedule.jsx';
 
 function App()
 {
@@ -23,6 +26,9 @@ function App()
                                     <Route path="inDev" element={ <Sorry /> } />
                                     <Route path="vehicleList" element={ <VehicleList /> } />
                                     <Route path="vehicleList/:vehiclexx" element={ <VehicleInfo /> } />
+                                    <Route path="staffList" element={ <StaffList /> } />
+                                    <Route path="staffList/:staffID" element={ <StaffInfo /> } />
+                                    <Route path="staffList/:staffID/schedule" element={ <StaffSchedule /> } />
                               </Route>
                         </Routes>
                   </BrowserRouter>

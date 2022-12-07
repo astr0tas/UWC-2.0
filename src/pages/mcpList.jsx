@@ -62,8 +62,7 @@ export const MCPList = () =>
                                     <th><h3>Thao tác</h3></th>
                               </tr>
                         </thead>
-                        <tbody id="MCPList">
-                        </tbody>
+                        <tbody id="MCPList"/>
                   </table>
                   <br />
                   <br />
