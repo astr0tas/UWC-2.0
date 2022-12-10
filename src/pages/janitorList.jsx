@@ -70,7 +70,7 @@ export const JanitorList = () =>
       {
             event.preventDefault();
             let target = event.currentTarget.id.substring(5);
-
+            Navigate("./" + target + "/taskScheduleJanitor");
       }
 
       return (

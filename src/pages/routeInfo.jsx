@@ -38,8 +38,7 @@ export const RouteInfo = () =>
             }
       });
 
-      //mcps, streets, vehicle, worker
-      let mcps, streets, vehicle, worker;
+      let mcps, streets, vehicle;
 
       for (let key in routeList)
       {
@@ -49,7 +48,6 @@ export const RouteInfo = () =>
                   mcps = routeList[key].cacmcp;
                   streets = routeList[key].tenduong;
                   vehicle = routeList[key].xe;
-                  //worker = routeList[key].congnhan;
                   break;
             }
 
@@ -70,8 +68,6 @@ export const RouteInfo = () =>
                   <table className="Properties">
                         <thead><h2>Mã tuyến: </h2> <h2 class="Props">{ RouteId }</h2></thead>
                         <br />
-                        {/* <thead><h2>Các MCPs: </h2> <h2 class="Props">{ mcps }</h2> <button> Chi tiết </button></thead>
-                        <br /> */}
                         <thead>
                               <h2>Các MCPs: </h2>
                               <a href={ baseMCPPath + mcps[0] }>{ mcps[0] }</a>
@@ -86,9 +82,6 @@ export const RouteInfo = () =>
                         <thead>
                               <h2>Công nhân đảm nhận: </h2>
                               <div id="printWorkerList" />
-                              {/* <a href={baseWorkerPath+worker[0]}>{worker[0]}</a>
-                              <h2 class="Props">,  </h2>
-                              <a href={baseWorkerPath+worker[1]}>{worker[1]}</a> */}
                         </thead>
                         <br />
                         <tbody id="RouteID"></tbody>

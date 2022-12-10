@@ -16,6 +16,10 @@ import { RouteList } from './pages/routeList.jsx';
 import { RouteInfo } from './pages/routeInfo.jsx';
 import { AreaList } from './pages/areaList.jsx';
 import { AreaInfo } from './pages/areaInfo.jsx';
+import { TaskScheduleJanitor } from "./pages/taskScheduleJanitor.jsx";
+import { TaskScheduleCollector } from "./pages/taskScheduleCollector.jsx";
+import { TaskArea } from "./pages/taskArea.jsx";
+import { TaskRoute } from "./pages/taskRoute.jsx";
 
 function App()
 {
@@ -39,6 +43,10 @@ function App()
                                     <Route path="routeList/:Rxx" element={ <RouteInfo /> } />
                                     <Route path="areaList" element={ <AreaList /> } />
                                     <Route path="areaList/:Axx" element={ <AreaInfo /> } />
+                                    <Route path="workerList/janitorList/:janitorID/taskScheduleJanitor" element={ <TaskScheduleJanitor /> } />
+                                    <Route path="workerList/janitorList/:janitorID/taskScheduleJanitor/taskArea" element={ <TaskArea /> } />
+                                    <Route path="workerList/collectorList/:collectorID/taskScheduleCollector" element={ <TaskScheduleCollector /> } />
+                                    <Route path="workerList/collectorList/:collectorID/taskScheduleCollector/taskRoute" element={ <TaskRoute /> } />                               
                               </Route>
                         </Routes>
                   </BrowserRouter>

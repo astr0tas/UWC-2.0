@@ -54,6 +54,8 @@ export const VehicleInfo = () =>
                         <img src='https://webexample75.files.wordpress.com/2022/12/20181029_081532_grande.jpg' alt="Ảnh MCP" />
                   </figure>
                   <table className="Properties">
+                        <thead><h2>MÃ XE: </h2> <h2 class="Props">{ vehicleId }</h2></thead>
+                        <br />
                         <thead><h2>BIỂN SỐ: </h2> <h2 class="Props">{ licensePlate }</h2></thead>
                         <br />
                         <thead><h2>HÃNG: </h2> <h2 class="Props">{ brand }</h2></thead>

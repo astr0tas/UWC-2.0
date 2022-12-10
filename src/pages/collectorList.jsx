@@ -62,7 +62,7 @@ export const CollectorList = () =>
       {
             event.preventDefault();
             let target = event.currentTarget.id.substring(6);
-            console.log(target);
+            Navigate("./" + target + "/taskScheduleCollector");
       }
 
       const renderJanitors = (event) =>

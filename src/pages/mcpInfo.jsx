@@ -19,8 +19,8 @@ export const MCPInfo = () =>
             }
       });
 
-      const currentRoute = useParams();
-      const MCPId = currentRoute.MCPxx;
+      const currentURL = useParams();
+      const MCPId = currentURL.MCPxx;
       let address, maximumCap, currentCap, latest, picture;
 
       for (let key in mcpList)

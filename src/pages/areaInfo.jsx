@@ -23,7 +23,9 @@ export const AreaInfo = () =>
                   {
                         if (areaList[key].ma === AreaId)
                         {
-                              if (areaList[key].congnhan.length !== 0)
+                              mcps = areaList[key].cacmcp;
+                              streets = areaList[key].tenduong;
+                              if(areaList[key].congnhan.length !== 0)
                               {
                                     let i = 0;
                                     for (i; i < areaList[key].congnhan.length - 1; i++)
@@ -39,8 +41,7 @@ export const AreaInfo = () =>
             }
       });
 
-      //mcps, streets, worker
-      let mcps, streets, worker;
+      var mcps, streets;
 
       for (let key in areaList)
       {
@@ -48,7 +49,6 @@ export const AreaInfo = () =>
             {
                   mcps = areaList[key].cacmcp;
                   streets = areaList[key].tenduong;
-                  //worker = areaList[key].congnhan;
                   break;
             }
       }
@@ -80,9 +80,6 @@ export const AreaInfo = () =>
                         <thead>
                               <h2>Công nhân đảm nhận: </h2>
                               <div id="printWorkerList" />
-                              {/* <a href={ baseWorkerPath + worker[0] }>{ worker[0] }</a>
-                              <h2 class="Props">,  </h2>
-                              <a href={ baseWorkerPath + worker[1] }>{ worker[1] }</a> */}
                         </thead>
                         <br />
                   </table>

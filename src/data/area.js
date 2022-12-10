@@ -12,37 +12,37 @@ var areaList = [
         ma: "A01",
         cacmcp: ["MCP01", "MCP10"],
         tenduong: 'Hùng Vương, 3 Tháng 2',
-        congnhan: ['J01', 'J10']
+        congnhan: ['J01']
     },
     {
         ma: "A02",
         cacmcp: ["MCP02", "MCP09"],
         tenduong: 'Lê Hồng Phong, Ngô Quyền',
-        congnhan: ['J02', 'J04']
+        congnhan: []
     },
     {
         ma: "A03",
         cacmcp: ["MCP03", "MCP08"],
         tenduong: 'Lý Thái Tổ, Nguyễn Tri Phương',
-        congnhan: ['J07']
+        congnhan: []
     },
     {
         ma: "A04",
         cacmcp: ["MCP04", "MCP07"],
         tenduong: 'Nguyễn Chí Thanh, Ngô Gia Tự',
-        congnhan: ['J05']
+        congnhan: []
     },
     {
         ma: "A05",
         cacmcp: ["MCP05", "MCP06"],
         tenduong: 'Sư Vạn Hạnh, Trần Nhân Tôn',
-        congnhan: ['J03']
+        congnhan: []
     },
     {
         ma: "A06",
         cacmcp: ["MCP01", "MCP05"],
         tenduong: 'Hùng Vương, Sư Vạn Hạnh',
-        congnhan: ['J06']
+        congnhan: []
     },
     {
         ma: "A07",
@@ -54,13 +54,13 @@ var areaList = [
         ma: "A08",
         cacmcp: ["MCP04", "MCP10"],
         tenduong: 'Nguyễn Chí Thanh, 3 Tháng 2',
-        congnhan: ['J01', 'J08']
+        congnhan: []
     },
     {
         ma: "A09",
         cacmcp: ["MCP02", "MCP06"],
         tenduong: 'Lê Hồng Phong, Trần Nhân Tôn',
-        congnhan: ['J09']
+        congnhan: []
     },
     {
         ma: "A10",

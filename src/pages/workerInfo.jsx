@@ -102,8 +102,8 @@ export const WorkerInfo = () =>
                   <br />
                   <br />
                   <div class="buttons">
-                        <button onClick={ getSchedule }>Lịch làm việc</button>
                         <button onClick={ handleClick }>Quay lại</button>
+                        <button onClick={ getSchedule }>Lịch làm việc</button>
                   </div>
             </div>
       );

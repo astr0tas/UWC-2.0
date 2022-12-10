@@ -1,18 +1,13 @@
-const padTo2Digits = (num) =>
+import {  formatDate } from './formatDate.js';
+
+Date.prototype.addDays = function (days)
 {
-      return num.toString().padStart(2, '0');
+      const date = new Date(this.valueOf())
+      date.setDate(date.getDate() + days)
+      return date
 }
 
-const formatDate = (date) =>
-{
-      return [
-            padTo2Digits(date.getDate()),
-            padTo2Digits(date.getMonth() + 1),
-            date.getFullYear(),
-      ].join('/');
-}
-
-class Schedule
+export class WorkerSchedule
 {
       constructor(Ngay, Thoigian, Mota, Trangthai)
       {
@@ -33,9 +28,7 @@ var Janitor = [
             sdt: "0365977562",
             email: "anht53@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 2 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom khu vực A01", "Đã hoàn thành"),
-                  new Schedule(formatDate(new Date(new Date() + 2 * 24 * 60 * 60 * 1000)), "14h00-18h30", "Thu gom khu vực A08", "Chưa đến thời gian làm việc")
-            ),
+            lichlamviec: [new WorkerSchedule(formatDate((new Date().addDays(1))).toLocaleString("en-US", { timeZone: "Asia/Ho_Chi_Minh" }),'19h00-0h00','Tập kết rác tại khu vực A01','Chưa đến thời gian hoàn thành')],
       },
       {
             ten: "Trần H",
@@ -46,7 +39,7 @@ var Janitor = [
             sdt: "0322585123",
             email: "h12@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 1 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom khu vực A02", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Lê Anh K",
@@ -57,7 +50,7 @@ var Janitor = [
             sdt: "0254666732",
             email: "anhk28@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 2 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom khu vực A05", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Lê Trung K",
@@ -68,7 +61,7 @@ var Janitor = [
             sdt: "0897222876",
             email: "trungk@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 3 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom khu vực A02", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Nguyễn Xuân A",
@@ -79,7 +72,7 @@ var Janitor = [
             sdt: "0784002777",
             email: "anguyen@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 1 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom khu vực A04", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Trần B",
@@ -90,7 +83,7 @@ var Janitor = [
             sdt: "0789232177",
             email: "btran@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 1 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom khu vực A06", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Dương Anh L",
@@ -101,7 +94,7 @@ var Janitor = [
             sdt: "0122892732",
             email: "anhl93@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 2 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom khu vực A03", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Đinh Xuân P",
@@ -112,7 +105,7 @@ var Janitor = [
             sdt: "0902804277",
             email: "xuanp@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 1 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom khu vực A08", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Nguyễn N",
@@ -123,7 +116,7 @@ var Janitor = [
             sdt: "0908137822",
             email: "nguyenn22@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 2 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom khu vực A09", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Võ Gia K",
@@ -134,7 +127,7 @@ var Janitor = [
             sdt: "0909767255",
             email: "kvo17@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 3 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom khu vực A01", "Đã hoàn thành")),
+            lichlamviec: [],
       },
 ];
 
@@ -150,7 +143,7 @@ var Collector = [
             sdt: "0957652236",
             email: "anhd15@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 2 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom tuyến đường R01", "Đã hoàn thành")),
+            lichlamviec: [new WorkerSchedule(formatDate((new Date().addDays(1))).toLocaleString("en-US", { timeZone: "Asia/Ho_Chi_Minh" }), '7h00-12h00', 'Thu gom rác trên tuyến đường R01', 'Chưa đến thời gian thực hiện')]
       },
       {
             ten: "Trần Văn H",
@@ -161,7 +154,7 @@ var Collector = [
             sdt: "0962819002",
             email: "htran@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 3 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom tuyến đường R07", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Đỗ Đức T",
@@ -172,7 +165,7 @@ var Collector = [
             sdt: "0907182666",
             email: "tdo09@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 1 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom tuyến đường R02", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Nguyễn Cao C",
@@ -183,7 +176,7 @@ var Collector = [
             sdt: "0906123765",
             email: "caoc@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 1 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom tuyến đường R03", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Đỗ Trọng A",
@@ -194,7 +187,7 @@ var Collector = [
             sdt: "0909436771",
             email: "trongado@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 2 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom tuyến đường R03", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Trần Trọng N",
@@ -205,7 +198,7 @@ var Collector = [
             sdt: "0978127775",
             email: "ntran@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 3 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom tuyến đường R01", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Bùi Minh T",
@@ -216,7 +209,7 @@ var Collector = [
             sdt: "0778291212",
             email: "minht@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 0 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom tuyến đường R05", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Vũ Trần H",
@@ -227,7 +220,7 @@ var Collector = [
             sdt: "0782029120",
             email: "hvu19@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 2 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom tuyến đường R06", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Nguyễn Minh Q",
@@ -238,7 +231,7 @@ var Collector = [
             sdt: "0901876555",
             email: "minhq@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 1 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom tuyến đường R08", "Đã hoàn thành")),
+            lichlamviec: [],
       },
       {
             ten: "Nguyễn Lâm N",
@@ -249,7 +242,7 @@ var Collector = [
             sdt: "0989137225",
             email: "nnguyen13@gmail.com",
             gioitinh: "Nam",
-            lichlamviec: new Array(new Schedule(formatDate(new Date(new Date() - 0 * 24 * 60 * 60 * 1000)), "7h30-12h00", "Thu gom tuyến đường R06", "Đã hoàn thành")),
+            lichlamviec: [],
       },
 ];
 
