@@ -33,6 +33,15 @@ export const AreaInfo = () =>
                                                 + "<h2 class=\"Props\">,   </h2>";
                                     document.getElementById('printWorkerList').innerHTML += "<a href=\"" + baseWorkerPath + areaList[key].congnhan[i] + "\">" + areaList[key].congnhan[i] + "</a>";
                               }
+
+                              if (areaList[key].cacmcp.length !== 0)
+                              {
+                                    let i = 0;
+                                    for (i=0; i < areaList[key].cacmcp.length - 1; i++)
+                                          document.getElementById('printMCPList').innerHTML += "<a href=\"" + baseMCPPath + areaList[key].cacmcp[i] + "\">" + areaList[key].cacmcp[i] + "</a>"
+                                                + "<h2 class=\"Props\">,   </h2>";                                    
+                                    document.getElementById('printMCPList').innerHTML += "<a href=\"" + baseMCPPath + areaList[key].cacmcp[i] + "\">" + areaList[key].cacmcp[i] + "</a>";
+                              }
                               break;
                         }
                   }
@@ -70,9 +79,7 @@ export const AreaInfo = () =>
                         <br />
                         <thead>
                               <h2>Các MCPs: </h2>
-                              <a href={ baseMCPPath + mcps[0] }>{ mcps[0] }</a>
-                              <h2 class="Props">,   </h2>
-                              <a href={ baseMCPPath + mcps[1] }>{ mcps[1] }</a>
+                              <div id="printMCPList" />
                         </thead>
                         <br />
                         <thead><h2>Tên đường: </h2> <h2 class="Props">{ streets }</h2></thead>

@@ -43,7 +43,13 @@
 .AreaID .Properties #printWorkerList {
     display: inline;
     font-weight: normal;
-    font-size: 110%;
+    text-decoration: none;
+    color: blue;
+}
+
+.AreaID .Properties #printMCPList {
+    display: inline;
+    font-weight: normal;
     text-decoration: none;
     color: blue;
 }

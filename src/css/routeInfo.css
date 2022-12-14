@@ -43,7 +43,13 @@
 .RouteID .Properties #printWorkerList {
     display: inline;
     font-weight: normal;
-    font-size: 110%;
+    text-decoration: none;
+    color: blue;
+}
+
+.RouteID .Properties #printMCPList {
+    display: inline;
+    font-weight: normal;
     text-decoration: none;
     color: blue;
 }

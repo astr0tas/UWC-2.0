@@ -31,7 +31,7 @@ export const MCPInfo = () =>
                   maximumCap = mcpList[key].sucChuaToiDa;
                   currentCap = mcpList[key].sucChuaHienTai;
                   latest = mcpList[key].lanThuGomGanDay;
-                  picture = mcpList[key].linkAnh;
+                  picture = mcpList[key].anh;
                   break;
             }
       }
@@ -49,7 +49,7 @@ export const MCPInfo = () =>
                   <h1>Thông tin chi tiết MCP</h1>
                   <br />
                   <figure>
-                        <img src='https://i0.wp.com/www.oakpark.com/wp-content/uploads/2022/06/Recycling_278963590.jpeg?fit=1200%2C800&ssl=1' alt="Ảnh MCP" />
+                        <img src={ picture } alt="Ảnh MCP" />
                   </figure>
                   <table className="Properties">
                         <thead><h2>MCP ID: </h2> <h2 class="Props">{ MCPId }</h2></thead>
